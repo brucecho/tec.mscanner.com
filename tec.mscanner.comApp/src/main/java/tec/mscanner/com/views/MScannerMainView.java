@@ -14,7 +14,7 @@ public class MScannerMainView {
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(MScannerMainView.class.getResource("main.fxml"));
+            View view = FXMLLoader.load(MScannerMainView.class.getResource("mscannermain.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {
