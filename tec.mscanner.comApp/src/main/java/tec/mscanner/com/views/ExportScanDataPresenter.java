@@ -12,15 +12,15 @@ import javafx.fxml.FXML;
 public class ExportScanDataPresenter {
 
     @FXML
-    private View exportscandata;
+    private View exportscandataview;
 
     public void initialize() {
-        exportscandata.setShowTransitionFactory(BounceInRightTransition::new);
+        exportscandataview.setShowTransitionFactory(BounceInRightTransition::new);
         
-        exportscandata.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+        exportscandataview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
             e -> System.out.println("Info")).getLayer());
         
-        exportscandata.showingProperty().addListener((obs, oldValue, newValue) -> {
+        exportscandataview.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

@@ -12,15 +12,15 @@ import javafx.fxml.FXML;
 public class ImportProductPresenter {
 
     @FXML
-    private View importproduct;
+    private View importproductview;
 
     public void initialize() {
-        importproduct.setShowTransitionFactory(BounceInRightTransition::new);
+        importproductview.setShowTransitionFactory(BounceInRightTransition::new);
         
-        importproduct.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+        importproductview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
             e -> System.out.println("Info")).getLayer());
         
-        importproduct.showingProperty().addListener((obs, oldValue, newValue) -> {
+        importproductview.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

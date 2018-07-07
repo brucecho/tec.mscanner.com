@@ -12,15 +12,15 @@ import javafx.fxml.FXML;
 public class ScanPresenter {
 
     @FXML
-    private View scan;
+    private View scanview;
 
     public void initialize() {
-        scan.setShowTransitionFactory(BounceInRightTransition::new);
+        scanview.setShowTransitionFactory(BounceInRightTransition::new);
         
-        scan.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+        scanview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
             e -> System.out.println("Info")).getLayer());
         
-        scan.showingProperty().addListener((obs, oldValue, newValue) -> {
+        scanview.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
