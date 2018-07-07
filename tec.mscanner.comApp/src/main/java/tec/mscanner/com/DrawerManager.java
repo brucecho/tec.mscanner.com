@@ -12,7 +12,10 @@ import com.gluonhq.charm.glisten.control.NavigationDrawer.ViewItem;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import static tec.mscanner.com.Main.MENU_LAYER;
 import static tec.mscanner.com.Main.MAIN_VIEW;
-import static tec.mscanner.com.Main.SECONDARY_VIEW;
+import static tec.mscanner.com.Main.IMPORTPRODUCT_VIEW;
+import static tec.mscanner.com.Main.CLEANPRODUCT_VIEW;
+import static tec.mscanner.com.Main.SCAN_VIEW;
+import static tec.mscanner.com.Main.EXPORTSCANDATA_VIEW;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 
@@ -29,8 +32,11 @@ public class DrawerManager {
         drawer.setHeader(header);
         
         final Item mainItem = new ViewItem("Main", MaterialDesignIcon.HOME.graphic(), MAIN_VIEW, ViewStackPolicy.SKIP);
-        final Item secondaryItem = new ViewItem("Secondary", MaterialDesignIcon.DASHBOARD.graphic(), SECONDARY_VIEW);
-        drawer.getItems().addAll(mainItem, secondaryItem);
+        final Item importproductItem = new ViewItem("Import Product", MaterialDesignIcon.DASHBOARD.graphic(), IMPORTPRODUCT_VIEW);
+        final Item cleabproductItem = new ViewItem("Clean Product", MaterialDesignIcon.DASHBOARD.graphic(), CLEANPRODUCT_VIEW);
+        final Item scanItem = new ViewItem("Scan", MaterialDesignIcon.DASHBOARD.graphic(), SCAN_VIEW);
+        final Item exportscandataItem = new ViewItem("Export Scan Data", MaterialDesignIcon.DASHBOARD.graphic(), EXPORTSCANDATA_VIEW);
+        drawer.getItems().addAll(mainItem, importproductItem,cleabproductItem,scanItem,exportscandataItem);
         
         if (Platform.isDesktop()) {
             final Item quitItem = new Item("Quit", MaterialDesignIcon.EXIT_TO_APP.graphic());

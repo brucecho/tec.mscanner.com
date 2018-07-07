@@ -9,23 +9,23 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import tec.mscanner.com.Main;
 import javafx.fxml.FXML;
 
-public class SecondaryPresenter {
+public class CleanProductPresenter {
 
     @FXML
-    private View secondary;
+    private View cleanproduct;
 
     public void initialize() {
-        secondary.setShowTransitionFactory(BounceInRightTransition::new);
+        cleanproduct.setShowTransitionFactory(BounceInRightTransition::new);
         
-        secondary.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+        cleanproduct.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
             e -> System.out.println("Info")).getLayer());
         
-        secondary.showingProperty().addListener((obs, oldValue, newValue) -> {
+        cleanproduct.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(Main.MENU_LAYER)));
-                appBar.setTitleText("Secondary");
+                appBar.setTitleText("Clean Product");
                 appBar.getActionItems().add(MaterialDesignIcon.FAVORITE.button(e -> 
                         System.out.println("Favorite")));
             }
