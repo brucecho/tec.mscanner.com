@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.javafxports:jfxmobile-plugin:1.3.11'
+        classpath 'org.javafxports:jfxmobile-plugin:1.3.12'
     }
 }
 
@@ -19,12 +19,12 @@ repositories {
 mainClassName = 'tec.mscanner.com.Main'
 
 dependencies {
-    compile 'com.gluonhq:charm:4.4.4'
+    compile 'com.gluonhq:charm:5.0.0'
 }
 
 jfxmobile {
     downConfig {
-        version = '3.7.2'
+        version = '3.8.0'
         // Do not edit the line below. Use Gluon Mobile Settings in your project context menu instead
         plugins 'display', 'lifecycle', 'statusbar', 'storage'
     }
