@@ -15,11 +15,11 @@ public class ImportProductView {
     public View getView() {
         try {
             View view = FXMLLoader.load(ImportProductView.class.getResource("importproduct.fxml"));
-            view.setName(name);
+            //view.setName(name);
             return view;
         } catch (IOException e) {
             System.out.println("IOException: " + e);
-            return new View(name);
+            return new View();
         }
     }
 }

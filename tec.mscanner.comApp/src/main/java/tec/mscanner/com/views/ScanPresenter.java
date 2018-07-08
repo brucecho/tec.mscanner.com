@@ -3,7 +3,7 @@ package tec.mscanner.com.views;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
-import com.gluonhq.charm.glisten.layout.layer.FloatingActionButton;
+//import com.gluonhq.charm.glisten.layout.layer.FloatingActionButton;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import tec.mscanner.com.Main;
@@ -17,8 +17,8 @@ public class ScanPresenter {
     public void initialize() {
         scanview.setShowTransitionFactory(BounceInRightTransition::new);
         
-        scanview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
-            e -> System.out.println("Info")).getLayer());
+        //scanview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+        //    e -> System.out.println("Info")).getLayer());
         
         scanview.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {

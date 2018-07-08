@@ -3,7 +3,7 @@ package tec.mscanner.com.views;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
-import com.gluonhq.charm.glisten.layout.layer.FloatingActionButton;
+//import com.gluonhq.charm.glisten.layout.layer.FloatingActionButton;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import tec.mscanner.com.Main;
@@ -13,12 +13,13 @@ public class ImportProductPresenter {
 
     @FXML
     private View importproductview;
+    
 
     public void initialize() {
         importproductview.setShowTransitionFactory(BounceInRightTransition::new);
         
-        importproductview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
-            e -> System.out.println("Info")).getLayer());
+        //importproductview.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+        //    e -> System.out.println("Info")).getLayer());
         
         importproductview.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {

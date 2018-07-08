@@ -15,11 +15,11 @@ public class MScannerMainView {
     public View getView() {
         try {
             View view = FXMLLoader.load(MScannerMainView.class.getResource("mscannermain.fxml"));
-            view.setName(name);
+            //view.setName(name);
             return view;
         } catch (IOException e) {
             System.out.println("IOException: " + e);
-            return new View(name);
+            return new View();
         }
     }
 }

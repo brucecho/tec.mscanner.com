@@ -15,11 +15,11 @@ public class ScanView {
     public View getView() {
         try {
             View view = FXMLLoader.load(ScanView.class.getResource("scan.fxml"));
-            view.setName(name);
+            //view.setName(name);
             return view;
         } catch (IOException e) {
             System.out.println("IOException: " + e);
-            return new View(name);
+            return new View();
         }
     }
 }
