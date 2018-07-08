@@ -20,6 +20,7 @@ mainClassName = 'tec.mscanner.com.Main'
 
 dependencies {
     compile 'com.gluonhq:charm:5.0.0'
+    compile fileTree(dir: 'lib', include: ['*.jar'])
 }
 
 jfxmobile {
